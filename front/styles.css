@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    
+}
+/*
+https://colorhunt.co/palette/207313
+gris verde      #e0ece4
+rojo?           #ff4b5c
+verde oscuro    #056674
+verde?          #66bfbf
+background: rgb(5,102,116);
+background: linear-gradient(180deg, rgba(5,102,116,1) 0%, rgba(102,191,191,1) 100%);
+*/
+
+header{
+    background: rgb(5,102,116);
+    background: linear-gradient(180deg, rgba(5,102,116,1) 0%, rgba(102,191,191,1) 100%);
+    border: 2px solid #e0ece4;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+}
+h2{
+    margin-bottom: 25px;
+}
+body{
+    font-family: 'Yeseva One', cursive;
+    color: black;
+    border: 2px solid #e0ece4;
+    background-color: #056674;
+   }
+ main{
+     margin: 35px;
+ }
+ ul{
+     margin: 10px;
+ }
+
+footer{
+    text-align: center;
+    padding: 3px;
+    font-size: 10px;
+    color: #e0ece4;
+}
+
+h2{
+    text-align: center;
+}
