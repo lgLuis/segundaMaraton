@@ -39,13 +39,14 @@ let compras = [
 
 //GET COMPRAS
 app.get('/compras', function(req, res){
-    res.status(200).send({"compras":compras})
+//    res.status(200).send({"compras":compras}) // se puede abreviar
+    res.status(200).send({compras})             //oki oki abreviado
 })
 
-//GET DE COMPRAS BY ID
+//GET DE COMPRAS BY ID      FOREACH
 app.get('/compras/:id', function(req, res){
     const id =req.params.id;
-    console.log("id: ", id)
+        console.log("id: ", id)
     let clienteEcontrado =undefined;
     compras.forEach(function(compra){
         if(compra.id ==id){
@@ -55,6 +56,21 @@ app.get('/compras/:id', function(req, res){
     })
     res.status(404).send({"message":"Cliente Not Found-404..."});
 })
+/*
+//GET DE COMPRAS BY ID      FILTER
+app.get('/compras/:id', function(req, res){
+    const id =req.params.id;
+
+    const resultado =compras.filter(function(compra){
+        return compra.id===id;
+    });
+    if(resultado.length>0){
+        res.status(200).send({resultado});
+    }else{
+        res.status(404).send({})
+    }
+});
+*/
 
 //POST DE CREAR COMPRAS
 app.post('/compras', function(req, res){//POST TIENE BODY
